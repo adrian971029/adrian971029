@@ -1,0 +1,25 @@
+name: Activity card
+
+on:
+  schedule:
+    - cron: "30 3 1,2 * *" # the card covers full months; the 2nd is a retry
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  card:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the card
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/activity_card.py --user adrian971029 --out assets
+      - name: Commit if it changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/activity-*.svg
+          git diff --cached --quiet || { git commit -m "Update activity card"; git push; }
