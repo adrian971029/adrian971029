@@ -17,8 +17,11 @@ I treat AI agents as a team: several Claude Code agents implement, test and revi
 
 Kotlin · Kotlin Multiplatform · Jetpack Compose · Compose Multiplatform · Coroutines/Flow · Koin · Ktor · SwiftUI · Spring Boot · Exposed · PostgreSQL · Stripe · Firebase · Google Cloud · gRPC · BLE · GitHub Actions · MCP
 
-<img src="https://raw.githubusercontent.com/adrian971029/github-profile-summary-cards/main/profile-summary-card-output/vision_friendly_dark/0-profile-details.svg" alt="Contribution summary" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
+  <img src="assets/activity-light.svg" alt="Monthly contributions on this account over the last 12 full months, private repositories included" width="100%">
+</picture>
 
-Most of my work lives in private repositories, so the graph above is the honest picture.
+This chart covers my own products, private repositories included. My day job at Solinftec lives in the company's own repositories, so it doesn't show up here.
 
 [LinkedIn](https://www.linkedin.com/in/adrian-del-toro)
